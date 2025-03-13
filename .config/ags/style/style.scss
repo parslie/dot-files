@@ -33,4 +33,10 @@ window.bar {
             }
         }
     }
+
+    .tray {
+        popover separator {
+            margin: 8px 0;
+        }
+    }
 }
