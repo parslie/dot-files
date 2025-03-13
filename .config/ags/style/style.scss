@@ -11,13 +11,16 @@ window.bar {
         color: colors.$fg;
     }
 
+    ///////////////////////
+    // Custom widget styles
+
     .clock {
         $gap: 8px;
         .date {
-            margin-right: $gap / 2;
+            margin-right: calc($gap / 2);
         }
         .time {
-            margin-left: $gap / 2;
+            margin-left: calc($gap / 2);
         }
     }
 }
