@@ -35,6 +35,14 @@ window.bar {
     }
 
     .tray {
+        menubutton {
+            > button {
+                border: 0;
+                box-shadow: none;
+                color: colors.$fg;
+            }
+        }
+
         popover separator {
             margin: 8px 0;
         }
