@@ -1,0 +1,23 @@
+@use "colors";
+@use "sass:list";
+
+window.bar {
+    $centerbox-pad: 5px;
+    $button-pad-x: 5px;
+
+    > centerbox {
+        padding: $centerbox-pad;
+        background: colors.$bg;
+        color: colors.$fg;
+    }
+
+    .clock {
+        $gap: 8px;
+        .date {
+            margin-right: $gap / 2;
+        }
+        .time {
+            margin-left: $gap / 2;
+        }
+    }
+}
