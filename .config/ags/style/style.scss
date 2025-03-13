@@ -2,11 +2,8 @@
 @use "sass:list";
 
 window.bar {
-    $centerbox-pad: 5px;
-    $button-pad-x: 5px;
-
     > centerbox {
-        padding: $centerbox-pad;
+        padding: 4px;
         background: colors.$bg;
         color: colors.$fg;
     }
@@ -21,6 +18,19 @@ window.bar {
         }
         .time {
             margin-left: calc($gap / 2);
+        }
+    }
+
+    .workspaces {
+        button {
+            border: 0;
+            box-shadow: none;
+            color: colors.$fg;
+
+            &.focused {
+                box-shadow: inset 0 0 0 1px colors.$primary;
+                color: colors.$primary;
+            }
         }
     }
 }
