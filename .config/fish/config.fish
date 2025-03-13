@@ -7,3 +7,5 @@ if status is-login
         exec systemd-cat -t uwsm_start uwsm start default
     end
 end
+
+pyenv init - fish | source
