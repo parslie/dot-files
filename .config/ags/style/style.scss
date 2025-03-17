@@ -1,0 +1,34 @@
+/* window.Bar {
+    background: transparent;
+    color: $fg-color;
+    font-weight: bold;
+
+    >centerbox {
+        background: $bg-color;
+        border-radius: 10px;
+        margin: 8px;
+    }
+
+    button {
+        border-radius: 8px;
+        margin: 2px;
+    }
+} */
+
+@use "color.scss";
+@use "sass:list";
+
+window.bar {
+    $bar-padding: 4px;
+    $bar-rounding: 8px;
+    $bar-shadow: 4px 7px 0 color.$shadow;
+
+    > centerbox {
+        margin: 32px 32px list.nth($bar-shadow, 2);
+        padding: $bar-padding;
+        border-radius: $bar-rounding;
+        background: color.$bg;
+        color: color.$fg;
+        box-shadow: $bar-shadow;
+    }
+}

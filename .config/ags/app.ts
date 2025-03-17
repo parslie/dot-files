@@ -1,10 +1,12 @@
 import { App } from "astal/gtk4";
-import style from "./style.scss";
-import Bar from "./widget/Bar";
+import style from "./style/style.scss";
+import windows from "./window";
+
+function main() {
+  windows.map((window) => App.get_monitors().map(window));
+}
 
 App.start({
   css: style,
-  main() {
-    App.get_monitors().map(Bar);
-  },
+  main: main,
 });
