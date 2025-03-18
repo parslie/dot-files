@@ -1,20 +1,3 @@
-/* window.Bar {
-    background: transparent;
-    color: $fg-color;
-    font-weight: bold;
-
-    >centerbox {
-        background: $bg-color;
-        border-radius: 10px;
-        margin: 8px;
-    }
-
-    button {
-        border-radius: 8px;
-        margin: 2px;
-    }
-} */
-
 @use "color.scss";
 @use "sass:list";
 
@@ -30,5 +13,30 @@ window.bar {
         background: color.$bg;
         color: color.$fg;
         box-shadow: $bar-shadow;
+    }
+
+    .workspaces {
+        border: 1px solid color.$button-border;
+        border-radius: $bar-rounding - $bar-padding;
+        background: color.$button-bg;
+
+        > button {
+            padding: 0 4px;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            color: color.$button-fg;
+            box-shadow: none;
+
+            &:hover {
+                background: color.$button-hover-bg;
+                color: color.$button-hover-fg;
+            }
+
+            &:active {
+                background: color.$button-highlight-bg;
+                color: color.$button-highlight-fg;
+            }
+        }
     }
 }
