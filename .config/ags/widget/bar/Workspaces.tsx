@@ -11,7 +11,6 @@ function WorkspaceButton({ workspace }: { workspace: AstalHyprland.Workspace }) 
     <button
       vexpand
       label={bind(workspace, "id").as((id) => {
-        2;
         let newId = id;
         for (const other of hyprland.workspaces) {
           // Makes each monitor have its own set of workspace IDs
