@@ -1,5 +1,6 @@
 if status is-interactive
     alias dot "git --git-dir=$HOME/.dot --work-tree=$HOME"
+    pyenv init - fish | source
 end
 
 if status is-login
@@ -7,3 +8,4 @@ if status is-login
         exec systemd-cat -t uwsm_start uwsm start default
     end
 end
+
