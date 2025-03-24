@@ -4,6 +4,7 @@ import Gdk from "gi://Gdk?version=4.0";
 import Clock from "../widget/bar/Clock";
 import Workspaces from "../widget/bar/Workspaces";
 import Tray from "../widget/bar/Tray";
+import PowerButton from "../widget/bar/PowerButton";
 
 export const BAR_NAME = "Bar";
 
@@ -20,6 +21,7 @@ export default function Bar(monitor: Gdk.Monitor) {
     >
       <centerbox cssName="centerbox">
         <box>
+          <PowerButton />
           <Workspaces monitor={monitor} />
         </box>
         <box></box>
