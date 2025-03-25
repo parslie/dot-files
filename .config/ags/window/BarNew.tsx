@@ -7,6 +7,7 @@ import Workspaces from "../widget/bar_new/Workspaces";
 import Volume from "../widget/bar_new/Volume";
 import Network from "../widget/bar_new/Network";
 import Bluetooth from "../widget/bar_new/Bluetooth";
+import Battery from "../widget/bar_new/Battery";
 
 export const BAR_NEW_NAME = "Bar New";
 
@@ -32,6 +33,7 @@ export default function BarNew(monitor: Gdk.Monitor) {
           <Bluetooth />
           <Network />
           <Volume />
+          <Battery />
         </box>
       </centerbox>
     </window>
