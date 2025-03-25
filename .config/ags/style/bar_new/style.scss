@@ -8,7 +8,8 @@ window.bar-new {
     color: colors.$fg;
     font-family: "Roboto";
     font-weight: 500;
-    font-size: 0.9em;
+
+    // Default widget styles
 
     separator {
         margin: 0;
@@ -33,6 +34,9 @@ window.bar-new {
     }
 
     popover {
+        font-family: "Roboto";
+        font-weight: 500;
+
         > contents {
             padding: 4px;
             border: 1px solid colors.$fg;
@@ -68,6 +72,16 @@ window.bar-new {
 
         &:active slider {
             background: colors.$active-fg;
+        }
+    }
+
+    // Specific widget styles
+
+    .bluetooth button.device {
+        padding: 6px 6px 0;
+
+        & revealer {
+            padding: 0 0 6px;
         }
     }
 }

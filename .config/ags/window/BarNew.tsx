@@ -6,6 +6,7 @@ import Clock from "../widget/bar_new/Clock";
 import Workspaces from "../widget/bar_new/Workspaces";
 import Volume from "../widget/bar_new/Volume";
 import Network from "../widget/bar_new/Network";
+import Bluetooth from "../widget/bar_new/Bluetooth";
 
 export const BAR_NEW_NAME = "Bar New";
 
@@ -28,6 +29,7 @@ export default function BarNew(monitor: Gdk.Monitor) {
           <Clock />
         </box>
         <box>
+          <Bluetooth />
           <Network />
           <Volume />
         </box>
