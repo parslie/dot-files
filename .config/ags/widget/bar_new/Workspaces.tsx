@@ -8,17 +8,20 @@ const hyprland = AstalHyprland.get_default();
 function WorkspaceButton({ workspace }: { workspace: AstalHyprland.Workspace }) {
   return (
     <button
-      label={bind(workspace, "id").as((id) => {
-        // Makes each monitor have its own set of workspace IDs
-        for (const other of hyprland.workspaces) {
-          if (workspace.monitor.name !== other.monitor.name && other.id < id) id -= 1;
-        }
-        return String(id);
-      })}
       onClicked={() => {
         if (hyprland.focusedWorkspace !== workspace) workspace.focus();
       }}
-    />
+    >
+      <label
+        label={bind(workspace, "id").as((id) => {
+          // Makes each monitor have its own set of workspace IDs
+          for (const other of hyprland.workspaces) {
+            if (workspace.monitor.name !== other.monitor.name && other.id < id) id -= 1;
+          }
+          return String(id);
+        })}
+      />
+    </button>
   );
 }
 

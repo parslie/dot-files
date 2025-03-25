@@ -4,6 +4,8 @@ import Gdk from "gi://Gdk?version=4.0";
 import Gtk from "gi://Gtk?version=4.0";
 import Clock from "../widget/bar_new/Clock";
 import Workspaces from "../widget/bar_new/Workspaces";
+import Volume from "../widget/bar_new/Volume";
+import Network from "../widget/bar_new/Network";
 
 export const BAR_NEW_NAME = "Bar New";
 
@@ -25,7 +27,10 @@ export default function BarNew(monitor: Gdk.Monitor) {
         <box>
           <Clock />
         </box>
-        <box></box>
+        <box>
+          <Network />
+          <Volume />
+        </box>
       </centerbox>
     </window>
   );
