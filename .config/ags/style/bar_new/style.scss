@@ -45,6 +45,10 @@ window.bar-new {
             color: colors.$fg;
             box-shadow: 2px 3px 8px colors.$shadow;
         }
+
+        > arrow {
+            background: colors.$fg;
+        }
     }
 
     scale {

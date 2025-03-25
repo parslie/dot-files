@@ -8,6 +8,7 @@ import Volume from "../widget/bar_new/Volume";
 import Network from "../widget/bar_new/Network";
 import Bluetooth from "../widget/bar_new/Bluetooth";
 import Battery from "../widget/bar_new/Battery";
+import Tray from "../widget/bar_new/Tray";
 
 export const BAR_NEW_NAME = "Bar New";
 
@@ -29,11 +30,15 @@ export default function BarNew(monitor: Gdk.Monitor) {
         <box>
           <Clock />
         </box>
-        <box>
-          <Bluetooth />
-          <Network />
-          <Volume />
-          <Battery />
+        <box spacing={4}>
+          <Tray />
+          <Gtk.Separator orientation={Gtk.Orientation.VERTICAL} />
+          <box>
+            <Bluetooth />
+            <Network />
+            <Volume />
+            <Battery />
+          </box>
         </box>
       </centerbox>
     </window>
