@@ -20,12 +20,12 @@ export default function Bar(monitor: Gdk.Monitor) {
       anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT | Astal.WindowAnchor.RIGHT}
     >
       <centerbox cssName="centerbox">
-        <box>
+        <box spacing={4}>
           <PowerButton />
           <Workspaces monitor={monitor} />
         </box>
         <box></box>
-        <box>
+        <box spacing={4}>
           <Tray />
           <Clock />
         </box>

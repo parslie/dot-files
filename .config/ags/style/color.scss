@@ -1,15 +1,13 @@
-// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
-//$fg-color: #{"@theme_fg_color"};
-//$bg-color: #{"@theme_bg_color"};
+// The colors are based off Gruvbox Dark Hard
 
-$bg: #4c4642;
-$fg: #f6ecc3;
-$shadow: rgba(0, 0, 0, 0.4);
+$background: #4c4642;
+$foreground: #f6ecc3;
+$border: #1d2021; //#f6ecc3;
 
-$button-border: #5b534d;
-$button-bg: #393634;
-$button-fg: #c2b395;
-$button-hover-bg: #494340;
-$button-hover-fg: #c1b194;
-$button-highlight-bg: #5b524c;
-$button-highlight-fg: #f6ecc3;
+$group-bg: #393634;
+$group-fg: #c2b395;
+$group-hover-bg: #494340;
+$group-hover-fg: #c1b194;
+$group-active-bg: #5b524c;
+$group-active-fg: #f6ecc3;
+$group-border: #5b534d;

@@ -1,42 +1,60 @@
 @use "color.scss";
-@use "sass:list";
 
 window.bar {
-    $bar-padding: 4px;
-    $bar-rounding: 8px;
-    $bar-shadow: 4px 7px 0 color.$shadow;
+    $button-rounding: 8px;
+    $button-padding: 3px;
 
     > centerbox {
-        margin: 32px 32px list.nth($bar-shadow, 2);
-        padding: $bar-padding;
-        border-radius: $bar-rounding;
-        background: color.$bg;
-        color: color.$fg;
-        box-shadow: $bar-shadow;
+        padding: 4px;
+        border-bottom: 1px solid color.$border;
+        background: color.$background;
+        color: color.$foreground;
     }
 
-    .workspaces {
-        border: 1px solid color.$button-border;
-        border-radius: $bar-rounding - $bar-padding;
-        background: color.$button-bg;
+    .module.workspaces,
+    .module.tray {
+        border: 1px solid color.$group-border;
+        border-radius: $button-rounding;
+        background: color.$group-bg;
+        color: color.$group-fg;
 
-        > button {
-            padding: 0 4px;
+        > button,
+        > menubutton > button {
+            padding: $button-padding;
             border: 0;
             border-radius: 0;
-            background: transparent;
-            color: color.$button-fg;
+            background: color.$group-bg;
+            color: color.$group-fg;
             box-shadow: none;
 
             &:hover {
-                background: color.$button-hover-bg;
-                color: color.$button-hover-fg;
+                background: color.$group-hover-bg;
+                color: color.$group-hover-fg;
             }
 
             &:active {
-                background: color.$button-highlight-bg;
-                color: color.$button-highlight-fg;
+                background: color.$group-active-bg;
+                color: color.$group-active-fg;
             }
+        }
+    }
+
+    .module.power {
+        padding: $button-padding;
+        border: 0;
+        border-radius: $button-rounding;
+        background: transparent;
+        color: color.$group-fg;
+        box-shadow: none;
+
+        &:hover {
+            background: color.$group-hover-bg;
+            color: color.$group-hover-fg;
+        }
+
+        &:active {
+            background: color.$group-active-bg;
+            color: color.$group-active-fg;
         }
     }
 }
