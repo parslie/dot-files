@@ -1,0 +1,31 @@
+@use "colors.scss";
+
+window.bar-new {
+    padding: 4px;
+    background: colors.$bg;
+    color: colors.$fg;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 0.9em;
+
+    separator {
+        background: colors.$dimmed-fg;
+    }
+
+    button {
+        padding: 2px 6px;
+        border: 0;
+        border-radius: 8px;
+        background: colors.$bg;
+        color: colors.$fg;
+        box-shadow: none;
+
+        &:hover {
+            background: colors.$hover-bg;
+        }
+
+        &:active {
+            color: colors.$active-fg;
+        }
+    }
+}
