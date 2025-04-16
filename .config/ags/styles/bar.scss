@@ -1,9 +1,12 @@
 @use "colors.scss";
+@use "sizes.scss";
 
 window.bar {
     centerbox {
+        margin-top: sizes.$shadow-range; // Shadow not visible without margin
         padding: 4px;
         background: colors.$bg;
         color: colors.$fg;
+        box-shadow: 0 0 sizes.$shadow-blur sizes.$shadow-spread colors.$shadow;
     }
 }
