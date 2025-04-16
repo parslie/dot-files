@@ -1,4 +1,13 @@
+@use "colors.scss";
+@use "sizes.scss";
+
 window.start-menu {
-    padding: 8px;
-    background: red;
+    > box {
+        margin: sizes.$shadow-range sizes.$shadow-range
+            calc(sizes.$monitor-padding - sizes.$shadow-range) sizes.$monitor-padding;
+        border-radius: sizes.$rounding;
+        background: colors.$bg;
+        color: colors.$fg;
+        box-shadow: 0 0 sizes.$shadow-blur sizes.$shadow-spread colors.$shadow;
+    }
 }
