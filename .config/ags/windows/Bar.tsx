@@ -3,14 +3,18 @@ import Gdk from "gi://Gdk?version=4.0";
 import StartButton from "../widgets/bar/StartButton";
 import { App } from "astal/gtk4";
 
-export const BAR_NAME = "Bar";
+const BAR_NAME = "Bar";
+
+export function getBarName(monitor: Gdk.Monitor) {
+  return `${BAR_NAME}-${monitor.connector}`;
+}
 
 export default function Bar(monitor: Gdk.Monitor) {
   return (
     <window
       visible
       application={App}
-      name={BAR_NAME}
+      name={getBarName(monitor)}
       cssClasses={["bar"]}
       gdkmonitor={monitor}
       exclusivity={Astal.Exclusivity.EXCLUSIVE}
@@ -18,7 +22,7 @@ export default function Bar(monitor: Gdk.Monitor) {
     >
       <centerbox cssName="centerbox">
         <box>
-          <StartButton />
+          <StartButton monitor={monitor} />
         </box>
         <box></box>
         <box></box>
