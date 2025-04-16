@@ -1,1 +1,19 @@
 @use "bar.scss";
+@use "colors.scss";
+@use "sizes.scss";
+
+button {
+    border: none;
+    border-radius: sizes.$rounding;
+    background: colors.$bg;
+    color: colors.$fg;
+    transition: background 50ms ease-out;
+
+    &:hover {
+        background: colors.$hover-bg;
+    }
+
+    &:active {
+        background: colors.$active-bg;
+    }
+}
