@@ -1,12 +1,10 @@
 import { App } from "astal/gtk4";
-import style from "./style/style.scss";
-import windows from "./window";
+import style from "./styles/index.scss";
+import Gdk from "gi://Gdk?version=4.0";
 
-function main() {
-  windows.map((window) => App.get_monitors().map(window));
-}
+function populate_monitor(monitor: Gdk.Monitor) {}
 
 App.start({
   css: style,
-  main: main,
+  main: () => App.get_monitors().map(populate_monitor),
 });
