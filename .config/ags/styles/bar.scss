@@ -1,0 +1,9 @@
+@use "colors.scss";
+
+window.bar {
+    centerbox {
+        padding: 4px;
+        background: colors.$bg;
+        color: colors.$fg;
+    }
+}
