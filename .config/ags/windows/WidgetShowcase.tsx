@@ -19,6 +19,8 @@ export default function WidgetShowcase(monitor: Gdk.Monitor) {
           <Button label="Label Button" />
           <Button />
         </box>
+        <Gtk.Separator />
+        <label label="Different types of buttons:" halign={Gtk.Align.START} />
       </box>
     </window>
   );

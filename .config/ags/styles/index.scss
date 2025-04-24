@@ -33,3 +33,15 @@ button {
         margin-left: 4px;
     }
 }
+
+separator {
+    background: colors.$border;
+
+    &.vertical {
+        margin: 0 dimens.$widget-spacing;
+    }
+
+    &.horizontal {
+        margin: dimens.$widget-spacing 0;
+    }
+}
