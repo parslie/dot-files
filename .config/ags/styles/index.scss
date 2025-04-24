@@ -12,7 +12,7 @@ window {
     box-shadow: 0 0 dimens.$shadow-blur dimens.$shadow-spread colors.$shadow;
 }
 
-button {
+*:not(.dropdown-input) > button {
     border: none;
     border-radius: dimens.$rounding;
     background: transparent; // So it matches background
@@ -32,6 +32,10 @@ button {
     > box label {
         margin-left: 4px;
     }
+}
+
+.dropdown-input > button {
+    // TODO: style
 }
 
 separator {

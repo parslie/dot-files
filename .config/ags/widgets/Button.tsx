@@ -4,7 +4,7 @@ import Gtk from "gi://Gtk?version=4.0";
 export type ButtonProps = {
   iconName?: string | Binding<string>;
   label?: string | Binding<string>;
-  onClicked?: () => void;
+  onClicked?: (button: Gtk.Button) => void;
 };
 
 export default function Button({ iconName, label, onClicked }: ButtonProps) {
