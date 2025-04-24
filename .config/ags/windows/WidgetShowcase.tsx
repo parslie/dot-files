@@ -1,5 +1,7 @@
 import Astal from "gi://Astal?version=4.0";
 import Gdk from "gi://Gdk?version=4.0";
+import Button from "../widgets/Button";
+import Gtk from "gi://Gtk?version=4.0";
 
 export default function WidgetShowcase(monitor: Gdk.Monitor) {
   return (
@@ -9,7 +11,15 @@ export default function WidgetShowcase(monitor: Gdk.Monitor) {
       gdkmonitor={monitor}
       anchor={Astal.WindowAnchor.LEFT | Astal.WindowAnchor.BOTTOM}
     >
-      <label label="I will use this window to design different widgets." />
+      <box vertical>
+        <label label="Different types of buttons:" halign={Gtk.Align.START} />
+        <box>
+          <Button iconName="system-lock-screen-symbolic" />
+          <Button iconName="system-lock-screen-symbolic" label="Icon Button" />
+          <Button label="Label Button" />
+          <Button />
+        </box>
+      </box>
     </window>
   );
 }

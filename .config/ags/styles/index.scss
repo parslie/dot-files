@@ -5,9 +5,31 @@
 
 window {
     margin: dimens.$shadow-range; /* Makes sure shadow is visible on all sides */
-    padding: dimens.$window-padding;
+    padding: dimens.$section-padding;
     border-radius: dimens.$rounding;
     background: colors.$bg;
     color: colors.$fg;
     box-shadow: 0 0 dimens.$shadow-blur dimens.$shadow-spread colors.$shadow;
+}
+
+button {
+    border: none;
+    border-radius: dimens.$rounding;
+    background: transparent; // So it matches background
+    color: colors.$fg;
+    box-shadow: none;
+    transition: background 50ms ease-out;
+
+    &:hover {
+        background: colors.$hover-bg;
+    }
+
+    &:active {
+        background: colors.$active-bg;
+    }
+
+    // If there is a box, then it has both an icon and a label
+    > box label {
+        margin-left: 4px;
+    }
 }
