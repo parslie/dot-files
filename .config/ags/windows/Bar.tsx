@@ -1,5 +1,6 @@
 import Astal from "gi://Astal?version=4.0";
 import Gdk from "gi://Gdk?version=4.0";
+import Clock from "../widgets/bar/Clock";
 
 export default function Bar(monitor: Gdk.Monitor) {
   return (
@@ -19,7 +20,7 @@ export default function Bar(monitor: Gdk.Monitor) {
           <label label="[Workspaces]" />
         </box>
         <box>
-          <label label="[Clock]" />
+          <Clock />
         </box>
         <box>
           <label label="[Tray]" />
