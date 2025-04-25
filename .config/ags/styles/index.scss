@@ -102,3 +102,26 @@ entry {
         background: colors.$surface-2;
     }
 }
+
+scale {
+    > value {
+        padding-right: 8px; // This assumes that the value is to the left of the trough
+    }
+    trough {
+        border: none;
+        border-radius: dimens.$rounding;
+        background: colors.$surface-0;
+        box-shadow: none;
+
+        highlight {
+            border: none;
+            padding: 4px 0;
+            background: colors.$green;
+        }
+
+        slider {
+            border: none;
+            background: colors.$green;
+        }
+    }
+}

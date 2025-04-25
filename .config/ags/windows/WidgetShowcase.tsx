@@ -27,8 +27,10 @@ export default function WidgetShowcase(monitor: Gdk.Monitor) {
           <DropdownInput options={[1, 2, 3]} />
           <DropdownInput options={["Test", "Not", "Asd"]} />
         </box>
-        <box>
+        <box vertical>
           <entry />
+          <slider value={0.5} />
+          <slider drawValue valuePos={Gtk.PositionType.LEFT} />
         </box>
       </box>
     </window>
