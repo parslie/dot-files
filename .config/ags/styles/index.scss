@@ -125,3 +125,22 @@ scale {
         }
     }
 }
+
+switch {
+    border: none;
+    transition: background 100ms ease-out;
+
+    &.off {
+        background: colors.$surface-0;
+    }
+
+    &.on {
+        background: colors.$peach;
+    }
+
+    slider {
+        border: none;
+        background: colors.$text;
+        box-shadow: 0 0 dimens.$shadow-blur dimens.$shadow-spread colors.$widget-shadow;
+    }
+}

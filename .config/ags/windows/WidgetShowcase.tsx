@@ -3,6 +3,7 @@ import Gdk from "gi://Gdk?version=4.0";
 import Button from "../widgets/Button";
 import Gtk from "gi://Gtk?version=4.0";
 import DropdownInput from "../widgets/DropdownInput";
+import Switch from "../widgets/Switch";
 
 export default function WidgetShowcase(monitor: Gdk.Monitor) {
   return (
@@ -31,6 +32,9 @@ export default function WidgetShowcase(monitor: Gdk.Monitor) {
           <entry />
           <slider value={0.5} />
           <slider drawValue valuePos={Gtk.PositionType.LEFT} />
+        </box>
+        <box>
+          <Switch />
         </box>
       </box>
     </window>
