@@ -11,6 +11,7 @@ export default function WidgetShowcase(monitor: Gdk.Monitor) {
       cssClasses={["widget-showcase"]}
       gdkmonitor={monitor}
       anchor={Astal.WindowAnchor.LEFT | Astal.WindowAnchor.BOTTOM}
+      keymode={Astal.Keymode.ON_DEMAND}
     >
       <box vertical>
         <label label="Different types of buttons:" halign={Gtk.Align.START} />
@@ -21,10 +22,13 @@ export default function WidgetShowcase(monitor: Gdk.Monitor) {
           <Button />
         </box>
         <Gtk.Separator />
-        <label label="Dropdown menu:" halign={Gtk.Align.START} />
+        <label label="Input fields:" halign={Gtk.Align.START} />
         <box>
           <DropdownInput options={[1, 2, 3]} />
           <DropdownInput options={["Test", "Not", "Asd"]} />
+        </box>
+        <box>
+          <entry />
         </box>
       </box>
     </window>

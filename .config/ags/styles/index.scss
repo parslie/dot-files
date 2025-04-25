@@ -85,3 +85,20 @@ separator {
         margin: dimens.$widget-spacing 0;
     }
 }
+
+entry {
+    border: none;
+    border-radius: dimens.$rounding;
+    background: colors.$surface-0;
+    color: colors.$text;
+    box-shadow: none;
+    transition: background 50ms ease-out;
+
+    &:hover {
+        background: colors.$surface-1;
+    }
+
+    &:active {
+        background: colors.$surface-2;
+    }
+}
