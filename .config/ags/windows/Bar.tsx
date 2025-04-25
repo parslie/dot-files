@@ -3,6 +3,7 @@ import Gdk from "gi://Gdk?version=4.0";
 import Clock from "../widgets/bar/Clock";
 import Volume from "../widgets/bar/Volume";
 import Network from "../widgets/bar/Network";
+import Bluetooth from "../widgets/bar/Bluetooth";
 
 export default function Bar(monitor: Gdk.Monitor) {
   return (
@@ -26,7 +27,7 @@ export default function Bar(monitor: Gdk.Monitor) {
         </box>
         <box>
           <label label="[Tray]" />
-          <label label="[Bluetooth]" />
+          <Bluetooth />
           <Network />
           <Volume />
           <label label="[Battery]" />
