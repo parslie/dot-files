@@ -3,3 +3,9 @@ export enum Brightness {
   Medium = "medium",
   Dark = "dark",
 }
+
+export enum ButtonStyle {
+  Outlined = "outlined",
+  Transparent = "transparent",
+  Filled = "filled",
+}

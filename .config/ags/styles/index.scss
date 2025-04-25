@@ -26,3 +26,62 @@ box.section {
 separator.section-border {
     background: colors.$surface-0;
 }
+
+button.regular {
+    border: 1px solid;
+    border-radius: 8px;
+    color: colors.$text;
+    box-shadow: none;
+    transition:
+        background 75ms ease-out,
+        border-color 75ms ease-out;
+
+    &.filled {
+        border-color: colors.$surface-0;
+        background: colors.$surface-0;
+
+        &:hover {
+            border-color: colors.$surface-1;
+            background: colors.$surface-1;
+        }
+
+        &:active {
+            border-color: colors.$surface-2;
+            background: colors.$surface-2;
+        }
+    }
+
+    &.outlined {
+        border-color: colors.$surface-0;
+        background: transparent;
+
+        &:hover {
+            border-color: colors.$surface-0;
+            background: colors.$surface-0;
+        }
+
+        &:active {
+            border-color: colors.$surface-1;
+            background: colors.$surface-1;
+        }
+    }
+
+    &.transparent {
+        border-color: transparent;
+        background: transparent;
+
+        &:hover {
+            border-color: colors.$surface-0;
+            background: colors.$surface-0;
+        }
+
+        &:active {
+            border-color: colors.$surface-1;
+            background: colors.$surface-1;
+        }
+    }
+
+    &.icon > box > label {
+        margin-left: 4px;
+    }
+}

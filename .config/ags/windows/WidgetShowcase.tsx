@@ -1,7 +1,9 @@
 import Astal from "gi://Astal?version=4.0";
 import Gdk from "gi://Gdk?version=4.0";
 import SectionBox, { SectionBorder } from "../widgets/SectionBox";
-import { Brightness } from "../widgets/enums";
+import { Brightness, ButtonStyle } from "../widgets/enums";
+import Button from "../widgets/Button";
+import Gtk from "gi://Gtk?version=4.0";
 
 export default function WidgetShowcase(monitor: Gdk.Monitor) {
   return (
@@ -19,8 +21,26 @@ export default function WidgetShowcase(monitor: Gdk.Monitor) {
           <label label={"Widget Showcase"} />
         </SectionBox>
         <SectionBorder />
-        <SectionBox>
-          <label label={"asd"} />
+        <SectionBox vertical>
+          <label label="Regular buttons" halign={Gtk.Align.START} />
+          <box spacing={4} marginTop={4}>
+            <Button iconName="firefox" label="Firefox" />
+            <Button iconName="folder-download-symbolic" />
+            <Button label="Download" />
+            <Button />
+          </box>
+          <box spacing={4} marginTop={4}>
+            <Button iconName="firefox" label="Firefox" style={ButtonStyle.Outlined} />
+            <Button iconName="folder-download-symbolic" style={ButtonStyle.Outlined} />
+            <Button label="Download" style={ButtonStyle.Outlined} />
+            <Button style={ButtonStyle.Outlined} />
+          </box>
+          <box spacing={4} marginTop={4}>
+            <Button iconName="firefox" label="Firefox" style={ButtonStyle.Filled} />
+            <Button iconName="folder-download-symbolic" style={ButtonStyle.Filled} />
+            <Button label="Download" style={ButtonStyle.Filled} />
+            <Button style={ButtonStyle.Filled} />
+          </box>
         </SectionBox>
       </box>
     </window>
