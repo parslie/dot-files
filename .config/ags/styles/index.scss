@@ -1,3 +1,28 @@
 @use "catppuccin/mocha.scss" as colors;
 
 // This style sheet contains default styles for widgets
+
+window {
+    border: 1px solid colors.$sapphire;
+    border-radius: 8px;
+    background: transparent; // Transparent so that it doesn't peek through the contents
+}
+
+box.section {
+    padding: 6px;
+    color: colors.$text;
+
+    &.light {
+        background: colors.$base;
+    }
+    &.medium {
+        background: colors.$mantle;
+    }
+    &.dark {
+        background: colors.$crust;
+    }
+}
+
+separator.section-border {
+    background: colors.$surface-0;
+}

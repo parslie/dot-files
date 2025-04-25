@@ -1,5 +1,7 @@
 import Astal from "gi://Astal?version=4.0";
 import Gdk from "gi://Gdk?version=4.0";
+import SectionBox, { SectionBorder } from "../widgets/SectionBox";
+import { Brightness } from "../widgets/enums";
 
 export default function WidgetShowcase(monitor: Gdk.Monitor) {
   return (
@@ -12,8 +14,14 @@ export default function WidgetShowcase(monitor: Gdk.Monitor) {
       namespace={"widget-showcase"}
       visible
     >
-      <box>
-        <label label={"asd"} />
+      <box vertical>
+        <SectionBox brightness={Brightness.Dark}>
+          <label label={"Widget Showcase"} />
+        </SectionBox>
+        <SectionBorder />
+        <SectionBox>
+          <label label={"asd"} />
+        </SectionBox>
       </box>
     </window>
   );
