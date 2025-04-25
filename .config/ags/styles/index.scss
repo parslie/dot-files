@@ -116,12 +116,13 @@ scale {
         highlight {
             border: none;
             padding: 4px 0;
-            background: colors.$green;
+            background: colors.$peach;
         }
 
         slider {
             border: none;
-            background: colors.$green;
+            background: colors.$text;
+            box-shadow: 0 0 dimens.$shadow-blur dimens.$shadow-spread colors.$widget-shadow;
         }
     }
 }
