@@ -4,6 +4,7 @@ import SectionBox, { SectionBorder } from "../widgets/SectionBox";
 import { Brightness, ButtonStyle } from "../widgets/enums";
 import Button from "../widgets/Button";
 import Gtk from "gi://Gtk?version=4.0";
+import MenuButton from "../widgets/MenuButton";
 
 export default function WidgetShowcase(monitor: Gdk.Monitor) {
   return (
@@ -40,6 +41,20 @@ export default function WidgetShowcase(monitor: Gdk.Monitor) {
             <Button iconName="folder-download-symbolic" style={ButtonStyle.Filled} />
             <Button label="Download" style={ButtonStyle.Filled} />
             <Button style={ButtonStyle.Filled} />
+          </box>
+        </SectionBox>
+        <SectionBorder />
+        <SectionBox vertical>
+          <label label="Menu buttons" halign={Gtk.Align.START} />
+          <box spacing={4} marginTop={4}>
+            <MenuButton iconName="folder-download-symbolic" label="Download" />
+            <MenuButton iconName="firefox" style={ButtonStyle.Outlined} />
+            <MenuButton label="Firefox" style={ButtonStyle.Filled}>
+              <SectionBox vertical>
+                <label label="asd" />
+                <label label="asd" />
+              </SectionBox>
+            </MenuButton>
           </box>
         </SectionBox>
       </box>

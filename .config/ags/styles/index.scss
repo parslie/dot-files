@@ -81,7 +81,80 @@ button.regular {
         }
     }
 
-    &.icon > box > label {
+    &.icon label {
         margin-left: 4px;
+    }
+}
+
+menubutton {
+    > button {
+        border: 1px solid;
+        border-radius: 8px;
+        color: colors.$text;
+        box-shadow: none;
+        transition:
+            background 75ms ease-out,
+            border-color 75ms ease-out;
+    }
+
+    &.filled > button {
+        border-color: colors.$surface-0;
+        background: colors.$surface-0;
+
+        &:hover {
+            border-color: colors.$surface-1;
+            background: colors.$surface-1;
+        }
+
+        &:active {
+            border-color: colors.$surface-2;
+            background: colors.$surface-2;
+        }
+    }
+
+    &.outlined > button {
+        border-color: colors.$surface-0;
+        background: transparent;
+
+        &:hover {
+            border-color: colors.$surface-0;
+            background: colors.$surface-0;
+        }
+
+        &:active {
+            border-color: colors.$surface-1;
+            background: colors.$surface-1;
+        }
+    }
+
+    &.transparent > button {
+        border-color: transparent;
+        background: transparent;
+
+        &:hover {
+            border-color: colors.$surface-0;
+            background: colors.$surface-0;
+        }
+
+        &:active {
+            border-color: colors.$surface-1;
+            background: colors.$surface-1;
+        }
+    }
+
+    &.icon > button label {
+        margin-left: 4px;
+    }
+
+    > popover arrow {
+        border: 1px solid colors.$sapphire;
+        background: colors.$base;
+    }
+
+    > popover contents {
+        padding: 0;
+        border: 1px solid colors.$sapphire;
+        border-radius: 8px;
+        background: colors.$base;
     }
 }
