@@ -1,10 +1,11 @@
 import Gtk from "gi://Gtk?version=4.0";
 import { ButtonStyle } from "./enums";
+import { Binding } from "astal";
 
 export type MenuButtonProps = {
   child?: Gtk.Widget;
-  iconName?: string;
-  label?: string;
+  iconName?: string | Binding<string>;
+  label?: string | Binding<string>;
   style?: ButtonStyle;
   onScrolled?: (button: Gtk.MenuButton, delta: number) => void;
 };
