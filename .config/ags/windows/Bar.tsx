@@ -2,6 +2,7 @@ import Astal from "gi://Astal?version=4.0";
 import Gdk from "gi://Gdk?version=4.0";
 import Clock from "../widgets/bar/Clock";
 import Volume from "../widgets/bar/Volume";
+import Network from "../widgets/bar/Network";
 
 export default function Bar(monitor: Gdk.Monitor) {
   return (
@@ -26,7 +27,7 @@ export default function Bar(monitor: Gdk.Monitor) {
         <box>
           <label label="[Tray]" />
           <label label="[Bluetooth]" />
-          <label label="[Network]" />
+          <Network />
           <Volume />
           <label label="[Battery]" />
         </box>
