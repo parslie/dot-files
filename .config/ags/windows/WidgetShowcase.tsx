@@ -24,6 +24,7 @@ export default function WidgetShowcase(monitor: Gdk.Monitor) {
         <label label="Dropdown menu:" halign={Gtk.Align.START} />
         <box>
           <DropdownInput options={[1, 2, 3]} />
+          <DropdownInput options={["Test", "Not", "Asd"]} />
         </box>
       </box>
     </window>

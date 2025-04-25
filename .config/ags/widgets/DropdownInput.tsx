@@ -22,7 +22,7 @@ export default function DropdownInput({ options, defaultOptionIdx, onSelect }: D
   return (
     <menubutton cssClasses={["dropdown-input"]} alwaysShowArrow>
       <label label={bind(selectedOptionIdx).as((optionIdx) => String(options[optionIdx]))} />
-      <popover>
+      <popover hasArrow={false}>
         <box vertical>
           {options.map((option, optionIdx) => (
             <Button

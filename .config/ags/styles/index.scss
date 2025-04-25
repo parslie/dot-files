@@ -34,8 +34,44 @@ window {
     }
 }
 
-.dropdown-input > button {
-    // TODO: style
+.dropdown-input {
+    button {
+        border: none;
+        border-radius: dimens.$rounding;
+        background: colors.$surface-0;
+        color: colors.$text;
+        box-shadow: none;
+        transition: background 50ms ease-out;
+
+        &:hover {
+            background: colors.$surface-1;
+        }
+
+        &:active {
+            background: colors.$surface-2;
+        }
+
+        label {
+            margin-left: 3px; // Centers the label and arrow as one horizontally
+        }
+
+        arrow {
+            padding-bottom: 2px; // Centers the arrow vertically
+        }
+    }
+
+    popover > contents {
+        padding: 0;
+        border: none;
+        border-radius: dimens.$rounding;
+        background: colors.$surface-0;
+        color: colors.$text;
+        box-shadow: 0 0 dimens.$shadow-blur dimens.$shadow-spread colors.$shadow;
+
+        button {
+            border-radius: 0;
+        }
+    }
 }
 
 separator {
