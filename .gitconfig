@@ -1,0 +1,10 @@
+[user]
+	name = Viktor Holta
+	email = viktor.holta@outlook.com
+[init]
+	defaultBranch = main
+[format]
+	pretty = oneline
+[core]
+	quotepath = off
+
