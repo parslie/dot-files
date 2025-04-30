@@ -1,0 +1,4 @@
+# The hyprland.conf file is meant to select whether to use the desktop or laptop
+# configuration. Hence it should be device-specific and not version-controlled.
+hyprland.conf
+
