@@ -17,7 +17,8 @@ window.bar {
 	menubutton.volume-button,
 	menubutton.bluetooth-button,
 	menubutton.network-button,
-	menubutton.tray-button {
+	menubutton.tray-button,
+	menubutton.battery-button {
 		@include mixins.bar-menu-button;
 
 		> button {
