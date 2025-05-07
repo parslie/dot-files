@@ -1,5 +1,9 @@
 @use "colors.scss";
 
+window.bar {
+	background: colors.$monitor-border;
+}
+
 window.monitor-corner {
 	$radius: 16px; // Cannot not be larger than Hyprland's gaps_out
 	$half-radius: calc($radius / 2);
