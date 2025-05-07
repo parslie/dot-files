@@ -7,28 +7,18 @@ window.bar {
 	color: colors.$monitor-border-fg;
 
 	menubutton.clock-button {
-		@include mixins.fully-round-corners;
+		@include mixins.bar-menu-button;
 
 		> button {
-			@include mixins.reset-button;
-			@include mixins.fully-round-corners;
-
-			padding: sizes.$button-padding;
-			background: colors.$monitor-border-bg;
-			transition: background 100ms ease;
-
-			&:hover {
-				background: colors.$monitor-border-hover-bg;
-			}
-
-			&:active {
-				background: colors.$monitor-border-active-bg;
-			}
+			padding: sizes.$label-button-padding;
 		}
+	}
 
-		// These rules only apply when overlay is visible
-		&:hover > button:not(:hover) {
-			background: colors.$monitor-border-active-bg;
+	menubutton.volume-button {
+		@include mixins.bar-menu-button;
+
+		> button {
+			padding: sizes.$icon-button-padding;
 		}
 	}
 }

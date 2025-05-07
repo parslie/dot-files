@@ -1,3 +1,5 @@
+@use "colors.scss";
+
 @mixin reset-button {
 	border: unset;
 	padding: unset;
@@ -9,4 +11,29 @@
 
 @mixin fully-round-corners {
 	border-radius: 1000px;
+}
+
+@mixin bar-menu-button {
+	@include fully-round-corners;
+
+	> button {
+		@include reset-button;
+		@include fully-round-corners;
+
+		background: colors.$monitor-border-bg;
+		transition: background 100ms ease;
+
+		&:hover {
+			background: colors.$monitor-border-hover-bg;
+		}
+
+		&:active {
+			background: colors.$monitor-border-active-bg;
+		}
+	}
+
+	// These rules only apply when overlay is visible
+	&:hover > button:not(:hover) {
+		background: colors.$monitor-border-active-bg;
+	}
 }
