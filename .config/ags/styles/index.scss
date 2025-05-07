@@ -1,0 +1,42 @@
+@use "colors.scss";
+
+window.monitor-corner {
+	$radius: 16px; // Cannot not be larger than Hyprland's gaps_out
+	$half-radius: calc($radius / 2);
+	$neg-half-radius: calc($half-radius * -1);
+
+	padding: $half-radius;
+	background: transparent;
+
+	&.top-left {
+		border-top-left-radius: $radius;
+		box-shadow:
+			$neg-half-radius 0 0 colors.$monitor-border,
+			0 $neg-half-radius 0 colors.$monitor-border,
+			$neg-half-radius $neg-half-radius 0 colors.$monitor-border;
+	}
+
+	&.top-right {
+		border-top-right-radius: $radius;
+		box-shadow:
+			$half-radius 0 0 colors.$monitor-border,
+			0 $neg-half-radius 0 colors.$monitor-border,
+			$half-radius $neg-half-radius 0 colors.$monitor-border;
+	}
+
+	&.bottom-left {
+		border-bottom-left-radius: $radius;
+		box-shadow:
+			$neg-half-radius 0 0 colors.$monitor-border,
+			0 $half-radius 0 colors.$monitor-border,
+			$neg-half-radius $half-radius 0 colors.$monitor-border;
+	}
+
+	&.bottom-right {
+		border-bottom-right-radius: $radius;
+		box-shadow:
+			$half-radius 0 0 colors.$monitor-border,
+			0 $half-radius 0 colors.$monitor-border,
+			$half-radius $half-radius 0 colors.$monitor-border;
+	}
+}

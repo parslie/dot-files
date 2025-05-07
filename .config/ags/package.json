@@ -1,6 +1,9 @@
 {
-    "name": "astal-shell",
-    "dependencies": {
-        "astal": "/usr/share/astal/gjs"
-    }
+  "name": "astal-shell",
+  "dependencies": {
+    "astal": "/usr/share/astal/gjs"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
 }
