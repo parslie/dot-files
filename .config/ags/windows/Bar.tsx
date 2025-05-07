@@ -4,6 +4,7 @@ import ClockButton from "../widgets/bar/ClockButton";
 import VolumeButton from "../widgets/bar/VolumeButton";
 import BluetoothButton from "../widgets/bar/BluetoothButton";
 import NetworkButton from "../widgets/bar/NetworkButton";
+import Tray from "../widgets/bar/Tray";
 
 /**
  * Adds a bar to the monitor.
@@ -27,7 +28,7 @@ export default function Bar(monitor: Gdk.Monitor) {
 					<ClockButton />
 				</box>
 				<box>
-					<label label={"[tray]"} />
+					<Tray />
 					<BluetoothButton />
 					<NetworkButton />
 					<VolumeButton />
