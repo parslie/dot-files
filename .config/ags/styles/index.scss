@@ -1,7 +1,36 @@
 @use "colors.scss";
+@use "mixins.scss";
+@use "sizes.scss";
 
 window.bar {
-	background: colors.$monitor-border;
+	background: colors.$monitor-border-bg;
+	color: colors.$monitor-border-fg;
+
+	menubutton.clock-button {
+		@include mixins.fully-round-corners;
+
+		> button {
+			@include mixins.reset-button;
+			@include mixins.fully-round-corners;
+
+			padding: sizes.$button-padding;
+			background: colors.$monitor-border-bg;
+			transition: background 100ms ease;
+
+			&:hover {
+				background: colors.$monitor-border-hover-bg;
+			}
+
+			&:active {
+				background: colors.$monitor-border-active-bg;
+			}
+		}
+
+		// These rules only apply when overlay is visible
+		&:hover > button:not(:hover) {
+			background: colors.$monitor-border-active-bg;
+		}
+	}
 }
 
 window.monitor-corner {
@@ -15,32 +44,32 @@ window.monitor-corner {
 	&.top-left {
 		border-top-left-radius: $radius;
 		box-shadow:
-			$neg-half-radius 0 0 colors.$monitor-border,
-			0 $neg-half-radius 0 colors.$monitor-border,
-			$neg-half-radius $neg-half-radius 0 colors.$monitor-border;
+			$neg-half-radius 0 0 colors.$monitor-border-bg,
+			0 $neg-half-radius 0 colors.$monitor-border-bg,
+			$neg-half-radius $neg-half-radius 0 colors.$monitor-border-bg;
 	}
 
 	&.top-right {
 		border-top-right-radius: $radius;
 		box-shadow:
-			$half-radius 0 0 colors.$monitor-border,
-			0 $neg-half-radius 0 colors.$monitor-border,
-			$half-radius $neg-half-radius 0 colors.$monitor-border;
+			$half-radius 0 0 colors.$monitor-border-bg,
+			0 $neg-half-radius 0 colors.$monitor-border-bg,
+			$half-radius $neg-half-radius 0 colors.$monitor-border-bg;
 	}
 
 	&.bottom-left {
 		border-bottom-left-radius: $radius;
 		box-shadow:
-			$neg-half-radius 0 0 colors.$monitor-border,
-			0 $half-radius 0 colors.$monitor-border,
-			$neg-half-radius $half-radius 0 colors.$monitor-border;
+			$neg-half-radius 0 0 colors.$monitor-border-bg,
+			0 $half-radius 0 colors.$monitor-border-bg,
+			$neg-half-radius $half-radius 0 colors.$monitor-border-bg;
 	}
 
 	&.bottom-right {
 		border-bottom-right-radius: $radius;
 		box-shadow:
-			$half-radius 0 0 colors.$monitor-border,
-			0 $half-radius 0 colors.$monitor-border,
-			$half-radius $half-radius 0 colors.$monitor-border;
+			$half-radius 0 0 colors.$monitor-border-bg,
+			0 $half-radius 0 colors.$monitor-border-bg,
+			$half-radius $half-radius 0 colors.$monitor-border-bg;
 	}
 }

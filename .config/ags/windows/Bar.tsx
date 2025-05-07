@@ -1,5 +1,6 @@
 import { Astal, Gdk } from "astal/gtk4";
 import app from "astal/gtk4/app";
+import ClockButton from "../widgets/bar/ClockButton";
 
 /**
  * Adds a bar to the monitor.
@@ -19,7 +20,7 @@ export default function Bar(monitor: Gdk.Monitor) {
 					<label label={"[power menu]"} />
 				</box>
 				<box>
-					<label label={"[clock]"} />
+					<ClockButton />
 				</box>
 				<box>
 					<label label={"[tray]"} />

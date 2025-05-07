@@ -1,0 +1,12 @@
+@mixin reset-button {
+	border: unset;
+	padding: unset;
+	border-radius: unset;
+	background: unset;
+	color: unset;
+	box-shadow: unset;
+}
+
+@mixin fully-round-corners {
+	border-radius: 1000px;
+}
