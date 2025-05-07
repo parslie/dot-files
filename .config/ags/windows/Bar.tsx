@@ -2,6 +2,7 @@ import { Astal, Gdk } from "astal/gtk4";
 import app from "astal/gtk4/app";
 import ClockButton from "../widgets/bar/ClockButton";
 import VolumeButton from "../widgets/bar/VolumeButton";
+import BluetoothButton from "../widgets/bar/BluetoothButton";
 
 /**
  * Adds a bar to the monitor.
@@ -26,6 +27,7 @@ export default function Bar(monitor: Gdk.Monitor) {
 				<box>
 					<label label={"[tray]"} />
 					<label label={"[system info]"} />
+					<BluetoothButton />
 					<VolumeButton />
 				</box>
 			</centerbox>
