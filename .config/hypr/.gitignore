@@ -1,0 +1,3 @@
+# hyprland.conf is meant to choose a configuration based on the device, so it should not
+# be version-controlled
+hyprland.conf
