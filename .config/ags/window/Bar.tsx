@@ -1,5 +1,6 @@
 import { App, Astal, Gdk } from "astal/gtk4";
 import ClockModule from "../widget/module/bar/ClockModule";
+import SystemModule from "../widget/module/bar/SystemModule";
 
 export default function Bar(monitor: Gdk.Monitor) {
 	return (
@@ -15,7 +16,9 @@ export default function Bar(monitor: Gdk.Monitor) {
 				<box>
 					<ClockModule />
 				</box>
-				<box></box>
+				<box>
+					<SystemModule />
+				</box>
 			</centerbox>
 		</window>
 	);
