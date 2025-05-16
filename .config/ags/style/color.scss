@@ -1,0 +1,35 @@
+@use "sass:color";
+
+// Based on https://blogs.gnome.org/shell-dev/files/2024/04/notifications-45.png
+$bar-bg: #000000;
+$bar-fg: #ffffff;
+$bar-active-bg: #3c3c3c;
+$bar-hover-bg: color.mix($bar-active-bg, $bar-bg, 50%);
+
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+$fg: #{"@theme_fg_color"};
+$bg: #{"@theme_bg_color"};
+$unfocused-fg: #{"@theme_unfocused_fg_color"};
+$unfocused-bg: #{"@theme_unfocused_bg_color"};
+
+$text: #{"@theme_text_color"};
+$base: #{"@theme_base_color"};
+$unfocused-text: #{"@theme_unfocused_text_color"};
+$unfocused-base: #{"@theme_unfocused_base_color"};
+
+$selected-bg: #{"@theme_selected_bg_color"};
+$selected-fg: #{"@theme_selected_fg_color"};
+$unfocused-selected-bg: #{"@theme_unfocused_selected_bg_color"};
+$unfocused-selected-fg: #{"@theme_unfocused_selected_fg_color"};
+
+$insensitive-bg: #{"@insensitive_bg_color"};
+$insensitive-fg: #{"@insensitive_fg_color"};
+$insensitive-base: #{"@insensitive_base_color"};
+$unfocused-insensitive: #{"@unfocused_insensitive_color"};
+
+$borders: #{"@borders"};
+$unfocused-borders: #{"@unfocused_borders"};
+
+$warning: #{"@warning_color"};
+$error: #{"@error_color"};
+$success: #{"@success_color"};

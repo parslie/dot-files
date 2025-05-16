@@ -1,20 +1,38 @@
-// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
-$fg-color: #{"@theme_fg_color"};
-$bg-color: #{"@theme_bg_color"};
+@use "color.scss";
 
-window.Bar {
-	background: transparent;
-	color: $fg-color;
-	font-weight: bold;
+window.bar {
+	$bar-padding: 3px;
 
-	> centerbox {
-		background: $bg-color;
-		border-radius: 10px;
-		margin: 8px;
+	background: color.$bar-bg;
+	color: color.$bar-fg;
+
+	menubutton.bar-module > popover {
+		margin-top: 6px;
 	}
 
-	button {
-		border-radius: 8px;
-		margin: 2px;
+	menubutton.bar-module > button,
+	button.bar-module {
+		// The label is colored and the button is transparent, to simulate being able
+		// to click a little bit outside of the button.
+
+		padding: $bar-padding 0;
+		border-radius: 0;
+		background: transparent;
+
+		> box {
+			padding: 1px 14px;
+			border-radius: 200px;
+			background: color.$bar-bg;
+			transition: inherit;
+		}
+
+		&:hover > box {
+			background: color.$bar-hover-bg;
+		}
+
+		&:active > box,
+		&:checked > box {
+			background: color.$bar-active-bg;
+		}
 	}
 }
