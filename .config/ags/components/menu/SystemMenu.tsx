@@ -1,3 +1,9 @@
+import PowerButtonsModule from "../module/menu/PowerButtonsModule";
+
 export default function SystemMenu() {
-	return <box>test</box>;
+	return (
+		<box vertical>
+			<PowerButtonsModule />
+		</box>
+	);
 }
