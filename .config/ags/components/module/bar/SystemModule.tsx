@@ -1,7 +1,7 @@
 import { bind } from "astal";
 import AstalNetwork from "gi://AstalNetwork?version=0.1";
 import AstalWp from "gi://AstalWp?version=0.1";
-import SystemMenu from "../../../menu/SystemMenu";
+import SystemMenu from "../../menu/SystemMenu";
 
 const network = AstalNetwork.get_default();
 const defaultSpeaker = AstalWp.get_default()!.audio.defaultSpeaker;

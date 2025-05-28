@@ -1,6 +1,6 @@
 import { App, Astal, Gdk } from "astal/gtk4";
-import ClockModule from "../widget/module/bar/ClockModule";
-import SystemModule from "../widget/module/bar/SystemModule";
+import ClockModule from "../module/bar/ClockModule";
+import SystemModule from "../module/bar/SystemModule";
 
 export default function Bar(monitor: Gdk.Monitor) {
 	return (
